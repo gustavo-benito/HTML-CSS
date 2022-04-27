@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <link rel="stylesheet" href="pseudo.css">
+    <style>
+        body{
+            font: normal 1em arial, helvetica, sans-serif;
+        }
+        a{
+            font-weight: bold;
+            text-decoration: none;
+            color: red;
+        }
+        a:visited{
+            color:darkred
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+        .especial:hover{
+            color: white;
+            background-color: black;
+            text-decoration: none;
+        }
+        .especial::before{
+            content: '>>';
+            
+        }
+        .especial::after{
+            content: '<<';
+        
+        }
+        div>p{
+           display: none;
+        }
+        div:hover>p{
+            display: block;
+            background-color: rgb(255, 0, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando um link</h1>
+
+    <p>Para acessar o youtube clique 
+        <a href="https://www.youtube.com" target="_blank">aqui</a>
+    </p>
+
+    <p>Para acessar o google clique 
+        <a href="https://www.google.com" target="_blank">neste link</a>
+    </p>
+
+    <p>
+        Para acessar o facebook clique 
+        <a href="https://www.facebook.com" target="_blank" class="especial">no link a seguir </a>
+    </p>
+
+
+    <h1>Conteúdo legal</h1>
+    <div>Passe o mouse aqui
+        <p>FUI HACKEADO NO ORKUT</p>
+    </div>
+</body>
+</html>
